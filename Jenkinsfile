@@ -2,7 +2,9 @@ pipeline {
     agent {
 		label "Agent-1"
 	}
-
+     environment { 
+        COURSE = 'DEVOPS'
+    }
     stages {
         stage('Build') {
             steps {
