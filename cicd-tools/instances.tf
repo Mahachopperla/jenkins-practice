@@ -23,7 +23,7 @@ resource "aws_instance" "roboshop_jenkins_agent" {
     volume_size = 50
     volume_type = "gp3" # or "gp2", depending on your preference
   }
-  user_data = file("jenkins_agent.sh")
+  user_data = file("jenkins-agent.sh")
 
   tags = {
     Name = "jenkins-agent"
