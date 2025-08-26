@@ -1,4 +1,4 @@
-resource "aws_instance" "roboshop" {
+resource "aws_instance" "roboshop_jenkins_server" {
   ami           = "ami-09c813fb71547fc4f"
   instance_type = "t3.small"
   vpc_security_group_ids = [aws_security_group.allow_all_ip.id]
@@ -14,7 +14,7 @@ resource "aws_instance" "roboshop" {
   }
 }
 
-resource "aws_instance" "roboshop" {
+resource "aws_instance" "roboshop_jenkins_agent" {
   ami           = "ami-09c813fb71547fc4f"
   instance_type = "t3.small"
   vpc_security_group_ids = [aws_security_group.allow_all_ip.id]
